@@ -1,0 +1,94 @@
+.headerLink {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #bc177f 0, #a61657 100%);
+    border: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: sans-serif;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+
+    will-change: box-shadow, transform;
+    font-size: 14px;
+}
+
+.headerLink:hover {
+    box-shadow: rgba(45, 35, 66, .4);
+
+}
+
+.headerLink:active {
+    box-shadow: #bc177f 0 3px 7px inset;
+
+}
+
+
+.onLogOutBtn {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+}
+
+.onLogOutBtn::after,
+.onLogOutBtn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+
+.onLogOutBtn::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    /* background: #28282d; */
+    background-image: radial-gradient(100% 100% at 100% 0, #bc177f 0, #da13cc 100%);
+    border-radius: 10px;
+}
+
+
+
+.onLogOutBtn:hover::before {
+    transform: translate(5%, 20%);
+
+}
+
+.onLogOutBtn:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.onLogOutBtn:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
