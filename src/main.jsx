@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <HelmetProvider>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-          <BrowserRouter>
+          <BrowserRouter basename='/goit-react-hw-08'>
             <App />
           </BrowserRouter>
         </PersistGate>
